@@ -1,5 +1,4 @@
-
-# Dynamic Loader Execution Documentation
+# Mock Dynamic Linker
 
 ## Overview
 
@@ -33,7 +32,7 @@ Compile the dynamic_loader.c to create the dynamic_loader executable.
 gcc -o dynamic_loader dynamic_loader.c
 ```
 
-### Step 5: Execute the Run Script
+### Step 3: Execute the Run Script
 Run the run.sh script to compile and execute the dynamic loader.
 
 ```sh
