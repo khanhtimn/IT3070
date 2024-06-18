@@ -6,14 +6,12 @@ This project demonstrates the process of loading and interpreting an ELF (Execut
 
 ### Files
 
-- `check_lib.sh`: A script to check and run the dynamic loader.
 - `dynamic_loader`: Compiled binary of the dynamic loader program.
 - `dynamic_loader.c`: Source code of the dynamic loader program.
 - `example.c`: Example C code to generate a shared library.
 - `libexample.so`: Compiled shared library used for testing.
 - `main`: Compiled binary of the main program (if any).
 - `main.c`: Source code of the main program (if any).
-- `run.sh`: A script to compile and run the dynamic loader.
 
 ## Execution Steps
 
