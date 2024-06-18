@@ -77,7 +77,7 @@ Program Headers:
     ...
 ```
 
-## Những điều cần ghi nhớ
+### Những điều cần ghi nhớ
 
 - Các chương trình được liên kết động sử dụng mã có trong các file thư viện riêng biệt.
 - `Trình liên kết động` là một trình thông dịch được nhân Linux tải và nhận
@@ -87,26 +87,10 @@ Program Headers:
 
 ## Thực hiện
 
-### Bước 1: Biên Dịch Thư Viện Chia Sẻ
-
-Biên dịch `example.c` để tạo thư viện chia sẻ `libexample.so`.
-
 ```sh
-gcc -shared -fPIC -o libexample.so example.c
-```
+make
 
-### Bước 2: Biên Dịch Trình Nạp Liên Kết Động
-
-Biên dịch dynamic_loader.c để tạo tệp thực thi dynamic_loader.
-
-```sh
-gcc -o dynamic_loader dynamic_loader.c
-```
-
-### Bước 3: Thực Thi
-
-```sh
-./dynamic_loader main
+make run
 ```
 
 ### Kết Quả Mong Đợi
