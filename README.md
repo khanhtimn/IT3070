@@ -36,7 +36,24 @@ gcc -o dynamic_loader dynamic_loader.c
 Run the run.sh script to compile and execute the dynamic loader.
 
 ```sh
-./run.sh
+./dynamic_loader main
+```
+### Expected Output
+The output should display the ELF header information, loaded segments, string table offset, and the names of the required libraries. For example:
+
+```
+ELF header read successfully
+Loaded segment at offset 0x0 (virtual address: 0x0, size: 0x640)
+Loaded segment at offset 0x1000 (virtual address: 0x1000, size: 0x15d)
+Loaded segment at offset 0x2000 (virtual address: 0x2000, size: 0xa4)
+Loaded segment at offset 0x2dc0 (virtual address: 0x3dc0, size: 0x260)
+String table offset: 0x488
+Needs library: libexample.so
+Needs library: libc.so.6
+```
+
+```sh
+./dynamic_loader libexample.so
 ```
 ### Expected Output
 The output should display the ELF header information, loaded segments, string table offset, and the names of the required libraries. For example:
@@ -47,6 +64,6 @@ Loaded segment at offset 0x0 (virtual address: 0x0, size: 0x538)
 Loaded segment at offset 0x1000 (virtual address: 0x1000, size: 0x13d)
 Loaded segment at offset 0x2000 (virtual address: 0x2000, size: 0xe4)
 Loaded segment at offset 0x2df8 (virtual address: 0x3df8, size: 0x220)
-String table offset: 0x3d0, base address: 0x3d0
-Needs library: libexample.so
+String table offset: 0x3d0
+Needs library: libc.so.6
 ```
